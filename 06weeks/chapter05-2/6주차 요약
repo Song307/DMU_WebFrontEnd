@@ -1,0 +1,102 @@
+< 6주차 >
+- Propse
+
+npx - npm 보조
+
+package.json : 프로젝트의 환경설정
+package-lock.json : 세부 환경설정
+
+
+
+컴퍼넌트
+* 컴퍼넌트 = jsx(JavaScriptXml) : js + html
+    jsx 주석처리 : {/*주석*/}
+* 시험 
+선언적함수로 컴퍼넌트 선언 -> 화살표 함수로 선언
+
+
+export default Header
+export default {Header, body} 하나 이상일떄 중괄호
+
+-----------------------------------------------------------------------------------------------
+function Header(){
+    var num1 = true;  //함수 선언 = var, const 등
+
+    var numV1 = true;
+    var numV2 = false;  //부울린 연산의 결과값(형변환) : String(numV1 == numV2)
+    
+    var numN = "10"; //문자형 숫자의 정수화 (형변환) : Number(num1) + 10
+
+    var numT1 = { name : "numT1.hi", age : 10 };  //객체안에 있는 프로퍼티 접근 : numT1.name
+    //<img> jsx블록에서 사용할시 시작, 종료태그 생략 불가 < />
+
+    return(
+        <header>
+            <h1> num1변수의 값 : String({numV1 == numV2}) </h1> {/* 주석 */}
+            <h1>{ numT1.name }</h1>
+        </header>
+    );
+}
+
+export default Header
+------------------------------------------------------------------------------------------------
+*   -> ex) <header><header>, <div></div>, <></>    /   <React.Fragment></React.Fragment>
+삼항식 :  num1 === 0 true : false 
+
+( ctrl + / : 한 줄 주석처리 )
+
+
+index.js
+-> <React.StrictMode>  : 하위 컴포넌트의 잠재적 문제가 있는지 검사해주는 컴포넌트
+
+* package.json 포트번호 변경
+"scripts" : {
+    "start" : "set PORT=3002 & react-sccripts start"
+}
+
+
+
+    
+
+
+[ 5장 리액트의 기본 기능 다루기 ]
+jsx (JavaScriptXml) --> 자바스크립트와 html문법을 섞어 사용하는 문법, : 자바스크립트의 확장문법, 공식자바스크립트문법 x
+
+-number, 문자열, Boolean(불리언값은)
+
+
+
+* JSX 문법 규칙 : 
+1. 닫힘 규칙 : <div></div>, <img />
+2. 최상위 태그 규칙(202p) : 반환하는 모든 태그는 최상위 태그로 감싸야 함.
+반환(return)해야할 모든 태그(html내용)은 최상위 태그로 묶어주어야 한다.
+3. 조건부 렌더링
+
+*jsx 스타일링 :스타일 규칙을 이용해 요소의 크기, 색상 등을 결정 (205p)
+    컴포넌트 안 html 속성명 - 카멜 방식
+        카멜 방식 : backgroundColor -->  O
+        스네이크 방식 : background-color --> X
+
+    css 스타일 적용 우선순위 : 인라인 >  헤드 > 외부파일
+    인라인 : <div style={{backgroundColor:"yellow", color:"red"}}>
+    외부파일 : <h1 className="body">바디 영역</h1>  
+    * . 기호는 클래스로 사용
+
+
+
+* 컴포넌트에 단일 값 전달하기 (p.209)
+- Props (propertises) : 데이터 값을 전달하는 객체 (부모 -> 자식)
+: 부모가 자식컴포넌트에 단일객체(-->Props라고 함) 형태로 값(컴포넌트의 속성값) 전달, Props는 부모만이 자식 컴포넌트에 전달 가능 (그 역은 성립x)
+    부모 -> <body na={name} location={"구로구"} />
+    자식 -> function body(props) -> {props.na}
+
+
+자바 최상위 컴퍼넌트 : object
+리액트 최상위(루트) 컴퍼넌트 : App
+
+body.js
+->
+
+Body.defaultProps={         //부모 컴퍼넌트가 넘겨주는 값이 없을시 속성값 설정
+    location : " 없음 "
+} 

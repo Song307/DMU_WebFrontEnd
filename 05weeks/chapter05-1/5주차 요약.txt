@@ -1,0 +1,80 @@
+5주차
+컴포넌트
+jsx
+Props
+
+
+*웹문서를 웹브라우저에 실행 :
+파싱 > DOM트리 > 렌더트리 > 렌더링 레이아웃 > 페인팅
+
+변화 내용을 반영하며 사용자에게 빠르게 나타나게 하기 위해 사용
+
+node.js : 서버에서 단독적으로 자바스크립트를 실행
+npm
+npx
+
+
+$ : 명령어 *(↘  : enter)
+
+※ npm (node package manager)
+*  $npm init ↘	(package.json 생성 : dependency, scripts)
+   $npm run start ↘
+   $npm i lodash
+
+※ npx (리엑트 프로젝트를 만들어 주는 프로그램)
+* npx create-react-app . ↘
+* 리액트 CRA (Create React App) :
+    보일러 플레이트 - 프로젝트 생성을 돕는 개발도구
+
+  『 npx create-react-app . 에러시,
+    $ npm uninstall -g create-react-app
+    $ npm install -g create-react-app  』
+
+* 리엑트 생성 폴더
+    node_modules : 외부 라이브러리 폴더 > 용량이 크기 때문에 과제 제출시 삭제후 제출
+    public : html 및 리소스 파일 폴더
+    src : 리엑트의 소스파일 폴더
+
+*
+    $ npx create-react-app . ↘
+    $ npm uninstall -g create-react-app ↘
+    $ npm install -g create-react-app ↘
+    $ npm run start ↘ : package.json에 정의되어있는 단축키 실행
+
+※ 컴퍼넌트
+    * 컴퍼넌트 : html을 return 해주는 함수 단위, 모듈 () ->
+    * 컴퍼넌트화 : 뼈대화, 반복 / 폼이 정해져 있는 경우
+    * 컴퍼넌트 함수 선언 : 
+        선언적 함수 선언 : function App() {}
+        화살표 함수 선언 : const App = () => {}
+
+※ 브라우저 실행 순서 ※
+    『 index.html > index.js > index.js의 App.js 』
+
+<5주차>
+    $ npm run start ↘ : 리액트 앱 프로젝트 실행 명령
+        -------> 중지 : ctrl + c
+    * 컴포넌트 : App함수처럼 html을 반환하는 스크립트 함수
+    * 프로젝트 실행 > index.html > bunder.js (자바스크립트 파일 index.js 등과 다른 js들을 묶어놓은것) 불러와 실행 > index.js > App.js > App 컴포넌트가 렌더링
+
+
+
+* 단위 태그
+  <h1></h1> = <h1/>
+  나누는 경우 : 중첩되는 부분이 있을때 ,
+
+
+컴퍼넌트 선언
+/*
+const Header= ()=> {
+    return(
+    <header>
+      <h1> 헤더 영역 : 학교소개  게시판  오시는길</h1>
+    </header>
+  );
+}
+*/
+
+
+#######
+5장 리액트의 기본 기능 다루기 : JSX : p.195

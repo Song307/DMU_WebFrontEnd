@@ -1,0 +1,40 @@
+
+!+tab : html 바로 만들기
+html -> 트리 구조 형성 (노드(태그) > 엘리멘트 > )
+
+
+<!DOCTYPE html>
+<html lang="en">        <<lang : 속성, en: 값>>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>첫 번째</title>
+    <link rel="stylesheet" href="reviewCSS.css">
+</head>
+<body>
+    <header>
+        <h1> 웹페이지 복습 </h1>        <<h1: 헤딩 1 (제목) >>
+    </header> <- 컨텐츠가 직접적으로 나오지 않는 시멘틱 태그
+    <article></article>
+    <footer></footer>
+</body>
+</html>
+
+
+css -> 셀렉터[h1](어떤 노드를 선택할지 고름) -> (어떻게 꾸밀지 정의)
+id, class -> #이름붙이기
+link 외부파일 연결태그 head태그에 쓰기 
+이벤트 리스너
+css : href, js : src
+
+js
+()<매개변수)
+메소드,  함수 이름
+
+함수 선언
+var,let,const=함수이름
+nun : 없음      <<var b=null;>>
+undefine : 정의 되지 않음    <<ex) let a j>>  
+const c=숫자,문자,부울린    const = 상수, 값을 한번 정하면 변경할 수 없음
+
+var, let의 차이 : let은 변수 선언후 재선언 불가, var은 재선언 가능

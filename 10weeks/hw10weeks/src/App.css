@@ -1,0 +1,30 @@
+/* src/App.css */
+.game-container {
+  text-align: center;
+  margin-top: 50px;
+  border: 2px solid black;
+            margin: 50px 500px; /* 모든 방향에 20px의 외부 여백 */
+}
+
+.choices {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.choices button {
+  margin: 0 10px;
+  padding: 10px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.choices img {
+  width: 100px;
+  height: 100px;
+}
+
+.result {
+  margin-top: 20px;
+}

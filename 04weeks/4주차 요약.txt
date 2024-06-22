@@ -1,0 +1,78 @@
+○ 외부 모듈 
+    모듈 : 반복해야할 코드를 별도의 모듈로 분류, 호출하여 실행
+
+
+○ 발전 과정 (텍스트파일 형식의 계보)
+HTML > XML > JSON
+HTML : 지정된 태그만 사용 가능
+XML : 내가 원하는 태그 지정가능, 네트워크 상에서 주고 받는 파일이 아닌 시스템 설정에만 사용 / BUT 용량이 너무 큼
+JSON : 주고받는 데이터의 파일 종류, 시스템의 환경설정하는 부분으로 발전
+
+
+npm : node package maneger : 여러가지 모듈을 엮어주는, 빌딩해주는 
+
+○ 버전 확인
+cmd
+    node -v
+    npm -v
+
+터미널 > CD > 드래그 : 디렉토리 이동
+
+
+※ npm 명령어 
+○ npm init -> npm에 의해서 패키지 생성
+    This utility will walk you through creating a package.json file.
+    It only covers the most common items, and tries to guess sensible defaults.
+
+    See `npm help init` for definitive documentation on these fields
+    and exactly what they do.
+
+    Use `npm install <pkg>` afterwards to install a package and
+    save it as a dependency in the package.json file.
+
+    Press ^C at any time to quit.
+    package name: (04weeks) /*04weeks입력 : 패키지 이름을 04weeks로 입력*/
+
+
+○ npm run 프로퍼티명 : npm에 의해 지정된 스크립트의 단축키를 실행
+
+
+※ 내가 작성한 모듈 export/import
+
+package.json
+    /* 데이터 파일종류이기떄문에 메소드가 없음, 프로퍼티(속성)로만 구성 */
+    "scripts" : 배치파일 = 매크로 
+    {} : 오브젝트
+    "프로퍼티명":"둉작", 
+
+circle.js
+    export {PI ,변수or함수, 변수or함수} 변수 내보내기 : 
+    export : 내보내기
+    import : 받기
+
+circle_thrid.js
+    export default : import 시 as 키워드 생략 가능
+
+○ npm install(npm i)
++) https://www.npmjs.com/   : 다른사람이 만들어둔 모듈
+    > search > "lodash" > npm i lodash
+    => added 1 package, and audited 2 packages in 2s => 패키지 생성
+package.json
+    "dependencies" : 프로젝트 패키지에서 사용되는 외부 라이브러리 항목과 버전
+package-lock.json
+
+d
++) npm i
+    node modules  라이브러리는 과제 제출시 삭제
+    -> npm i : package.json 파일의 ependencies에 저장되있는 "lodash" 모듈이 자동으로 설치됨
+
++) 
+
+
+○ npx create-react-app .
+에러시
+    npm uninstall -g create-react-app  
+    npm install -g create-react-app  
+https://www.frontoverflow.com/question/16/npx%20create-react-app%EC%9D%B4%20%EC%9E%91%EB%8F%99%ED%95%98%EC%A7%80%20%EC%95%8A%EC%8A%B5%EB%8B%88%EB%8B%A4.
+
+

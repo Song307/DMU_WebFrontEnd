@@ -1,0 +1,17 @@
+const memoizedComp = React.memo(Comp);
+
+*강화된컴포넌트 : const EnchancedComp = withFunc(comp);
+
+function withLifecycleLogging( WrappedCom ){
+    return(props) =>{
+        useEffect( () => {console.log("mount!"); return()=>console.log("unmount!");} []);
+        useEffect( () => {console.log("update!");});
+        return <WrappedCom {...props} />;
+    }
+}
+
+
+부가기능 : 보안 ,트렌직션, 로그 
+트렌직션
+rollback : 값의 insert에 실패 했을때, 이미 적용된 값을 빼는 것
+     상업화된 페이지 필수

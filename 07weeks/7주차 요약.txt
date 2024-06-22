@@ -1,0 +1,66 @@
+< 7주차 >
+* 컴포넌트 : App함수처럼 html을 반환하는 스크립트 함수
+
+*jsx(javascruot xml) --<
+
+
+props(properties) : 부모가 자식컴퍼넌트에 단일객체 (-->props라 함) 형태로 값(컴포넌트의 속성값) 전달
+
+1. 컴포넌트에 단일 값 전달하기
+2. 컴포넌트에 복수 값 전달하기
+3. 컴포넌트의 전달된 복수 값을 구조 분해 할당(p.88) (body1.js)
+    const { name, location } = props;
+    props 안에 있는 프로퍼티(객체)를 변수 단위로 쪼개는 행위
+
+4. 스프레드 연산자로 여러 개의 값 전달(p.91) (body2.js)
+    ... : 스프레드(전개) 연산자
+    : 여러개의 데이터를 하나의 객체 형태로 선언하여 전달
+      부모(App.js) ->
+        const bodyProps= { name : "송하성",    location : "부천시" }
+        <Body { ...bodyProps }/>
+      자식(body.js) ->
+        function Body({ name, location })
+
+5. 배열 객체 값 전달 (body3.js)
+    부모(App.js) ->
+      const bodyProps= { favoList : ["파스타", "떡", "라면"] }
+    자식(body.js) ->
+      function Body({ favoList })
+      return{
+        {favoList.length}개 음식이며 {favoList[0]} 음식이 첫번째 이다. 
+      }
+
+6. Props로 컴퍼넌트 전달하기
+  app.js에서 childComp 컴포넌트 생성
+    function ChildComp()
+    <Body>  <ChildComp/>  </Body>
+
+
+################################################################################
+* 이벤트 처리하기 (p.220, chapter05-3)
+  - 이벤트란? : 웹페이지에서 일어나는 사용자의 행위 (버튼 클릭, 페이지 스크롤 등)
+  - 이벤트 핸들러(이벤트 리스너) : 이벤트 발생하면 이벤트를 처리하는 함수
+  - 이벤트 핸들링 : 이벤트가 발생하면 특정 코드가 동작하도록 하는 작업
+  
+  * 리액트 이벤트 핸들링
+    - 카멜 케이스 문법에 따라 onCluck
+    - onClick={핸들러}
+
+################################################################################
+* 함수 useState 문법 :
+  const [light, setLight ] = useState('Off')
+        state변수
+  ** 리액트 훅 이란 함수로 만든 리액트 컴포넌트에서 컴포넌트들의 기능일 이용하도록 도와주는 함수들,, useState / useRef 등
+
+
+  -> import {useState} from "react";
+  const [count, setCount] =useState(0);    //useState(react의 훅) : 상태값 선언,  0 <- 초기값, 2칸 배열값 리턴[변수명, 메소드(set변수명)]
+  function handleOnClick(){setCount(count+1);}
+
+  ###############
+*Props 와 State (p.238) (test / body2.js)
+* 자식 컴포넌트에 State 값을 props
+
+
+
+시험범위 p.241까지 Ref 전까지

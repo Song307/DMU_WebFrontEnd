@@ -1,0 +1,10 @@
+.body {                 
+    background-color:pink ;
+    color : blue;
+
+}
+.body:hover {
+    background-color: rgb(192, 255, 222);
+    color : blue;
+}
+
